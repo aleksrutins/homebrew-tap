@@ -1,8 +1,8 @@
 class AmberBash < Formula
   desc "Amber, the programming language that compiles to Bash"
   homepage "https://amber-lang.com"
-  url "https://github.com/Ph0enixKM/Amber/releases/download/0.3.4-alpha/source.tar.gz"
-  sha256 "26da447d26b1c502b87055fdaae3a62f443e4f0d1c8866e6dca995ee664cc3b4"
+  url "https://github.com/Ph0enixKM/Amber/releases/download/0.4.0-alpha/source.tar.gz"
+  sha256 "ff616312f6c91e7d4044e4a8546a0dd80bf78bebce67c30ffd55347e26593096"
   license "GPL-3.0-only"
 
   depends_on "rust" => :build
