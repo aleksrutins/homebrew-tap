@@ -1,25 +1,25 @@
 class Ionian < Formula
   desc "A fast and simple static site generator."
   homepage "https://ionian.farthergate.com"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.2/ionian-aarch64-apple-darwin.tar.xz"
-      sha256 "f85de11e9bba04705429516372e304b053db24c8a48e8a4ca3d4841ffbff35cb"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-aarch64-apple-darwin.tar.xz"
+      sha256 "68d6e445214a739264526ec8e800135ca39de8ae56bc1ecf76410db061e1506b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.2/ionian-x86_64-apple-darwin.tar.xz"
-      sha256 "d8ae85d4bd4781e737cc935e0bfbd9696865668002c2a71135a61a4de8f107de"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-x86_64-apple-darwin.tar.xz"
+      sha256 "94d4bcb415ba02bc36e80040079894c922f58ead8290cd64a18881d200536e12"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.2/ionian-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "23e447b49b69cdf43e42c0b3966b3da2435bb2d840e413c974bd1484161558ad"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "70744edede0afe835c0c747bc53f6cb741157a5d5203b23462fc4aef9a6c56fb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.2/ionian-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f6e46e8157a9e6ceabc5ba6c616bd868297ce1a2f08160e8e86068b1ef4fa2f5"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5b401773aa9465f3285ff5d215531a23698fc62e6c8d6434992abe9602a877cd"
     end
   end
 
