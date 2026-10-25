@@ -1,30 +1,31 @@
 class Ionian < Formula
   desc "A fast and simple static site generator."
   homepage "https://ionian.farthergate.com"
-  version "0.2.3"
+  version "0.3.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-aarch64-apple-darwin.tar.xz"
-      sha256 "68d6e445214a739264526ec8e800135ca39de8ae56bc1ecf76410db061e1506b"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.3.1/ionian-aarch64-apple-darwin.tar.xz"
+      sha256 "d4e06b755db008b4746f42c8a1a9ecc1457fdb06ba71757f7998332c05583672"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-x86_64-apple-darwin.tar.xz"
-      sha256 "94d4bcb415ba02bc36e80040079894c922f58ead8290cd64a18881d200536e12"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.3.1/ionian-x86_64-apple-darwin.tar.xz"
+      sha256 "259570ca71b1c192d67c2e27ce6b01c3507695c93176e16fd103fc96e0292fb4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "70744edede0afe835c0c747bc53f6cb741157a5d5203b23462fc4aef9a6c56fb"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.3.1/ionian-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b34d5f0585bc055108a7d9816459583b90e34cfdd9bbae835807318fbaa85fe0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aleksrutins/ionian/releases/download/v0.2.3/ionian-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5b401773aa9465f3285ff5d215531a23698fc62e6c8d6434992abe9602a877cd"
+      url "https://github.com/aleksrutins/ionian/releases/download/v0.3.1/ionian-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "58499e1a94a947d66c64574006c8b9bdbdec8de64e803c8c58883f9c12958f9e"
     end
   end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-pc-windows-gnu":            {},
     "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
@@ -49,10 +50,18 @@ class Ionian < Formula
   end
 
   def install
-    bin.install "ionian" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ionian" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ionian" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ionian" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ionian"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ionian"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ionian"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ionian"
+    end
 
     install_binary_aliases!
 
